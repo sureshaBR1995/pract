@@ -1,0 +1,41 @@
+<center><h1>Edit the record <%=@p.name %>'s record</h1></center>
+
+<form action="/blooddetails/<%=@p.id %>" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<input type="hidden" name="_method" value="patch">
+	<center><pre>
+	<label>name</label>	<input type="text" name="blood[name]" value="<%= @p.name%>"><br><br>
+	<label>age</label>	<input type="text" name="blood[age]" value="<%= @p.age%>"><br><br>
+	<label>bgroup</label>	<input type="text" name="blood[bgroup]" value="<%= @p.bgroup%>"><br><br>
+	<label>gender</label>	<input type="text" name="blood[gender]" value="<%= @p.gender%>"><br><br>
+	<label>contact</label>	<input type="text" name="blood[contact]" value="<%= @p.contact%>"><br><br>
+		<input type="submit" value="update" style="background: blue">
+</pre></center>
+</form>
+<<!DOCTYPE html> 
+<html> 
+<head> 
+ <title></title> 
+</head> 
+<style type="text/css"> 
+ body 
+ { 
+      margin: 0; 
+      padding: 0; 
+      background: #15E2B5;  
+ } 
+ .des 
+ { 
+       width: 620px; 
+  position: absolute; 
+  top: 20%; 
+  left: 33%; 
+ } 
+ .des h1 
+ { 
+   
+  border-bottom: 6px solid #4caf50; 
+  font-size: 40px; 
+  margin-bottom: 40px; 
+  padding: 20px 0; 
+ } 
